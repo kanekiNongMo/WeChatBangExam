@@ -1,0 +1,20 @@
+<view class="ranking">
+  <view class="total_ranking_title">
+    <text class="total">总排行榜</text>
+    <text class="all">全部></text>
+  </view>
+  <view class="total_container">
+    <view class="total_container_top">
+    <text class="total">Top1</text>
+    <text class="all">答对题数725</text>
+    </view>
+    <view class="total_container_top">
+    <text class="total">Top2</text>
+     <text class="all">答对题数725</text>
+    </view>
+    <view class="total_container_top">
+    <text class="total">Top3</text>
+     <text class="all">答对题数725</text>
+    </view>
+  </view>
+</view>
