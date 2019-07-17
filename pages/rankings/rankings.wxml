@@ -16,5 +16,9 @@
     <text class="total">Top3</text>
      <text class="all">答对题数725</text>
     </view>
+     <view class="total_container_top">
+    <text class="total">Top4</text>
+     <text class="all">答对题数725</text>
+    </view>
   </view>
 </view>
