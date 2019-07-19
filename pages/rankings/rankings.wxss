@@ -1,33 +1,13 @@
-page {
-  background-color: #eee;
-}
+@import "../template/template.wxss";
 
-.ranking {
-  border-top: 1rpx solid #eee;
+.major_ranking_title {
+  margin-top: 20rpx;
   background-color: #fff;
-}
-
-.total_ranking_title {
-  padding: 25rpx;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-.total_container_top {
-  width: 650rpx;
-  border-top: 1rpx solid #eee;
-  padding: 25rpx;
+  padding: 20rpx 20rpx;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.total {
-  font-size: 28rpx;
-}
 
-.all {
-  font-size: 28rpx;
-  color: #b2b2b2;
-}
+

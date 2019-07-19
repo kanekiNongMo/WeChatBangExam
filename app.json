@@ -1,13 +1,13 @@
 {
   "pages": [
-    
     "pages/home/home",
     "pages/index/index",
     "pages/logs/logs",
     "pages/rankings/rankings",
     "pages/my/my",
     "pages/home/home-topic",
-    "pages/home/home-java"
+    "pages/home/home-java",
+    "pages/rankings/rankings-detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

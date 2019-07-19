@@ -1,0 +1,7 @@
+@import "../template/template.wxss";
+/* pages/rankings/rankings-detail.wxss */
+.rankings-detail{
+  margin-top: 20rpx;
+}
+
+

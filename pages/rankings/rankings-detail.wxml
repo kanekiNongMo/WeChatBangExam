@@ -1,0 +1,5 @@
+<import src="../template/template.wxml" />
+<view class="rankings-detail">
+<template is="my_ranking" data="{{rangking:rangking}}"></template>
+<template is="ranking_top"  data="{{rangking}}"></template> 
+</view>

@@ -1,1 +1,66 @@
+page {
+  background-color: #eee;
+}
 
+.ranking {
+  border-top: 1rpx solid #eee;
+  background-color: #fff;
+}
+
+.total_ranking_title {
+  padding: 25rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.total_container_top {
+  width: 90%;
+  border-top: 1rpx solid #eee;
+  margin-left: 32rpx;
+  padding: 20rpx 0rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.total {
+  font-size: 28rpx;
+}
+
+.all {
+  font-size: 28rpx;
+  color: #a76262;
+}
+
+.my_container {
+  background-color: #fff;
+}
+
+.my_container_top {
+  width: 90%;
+  border-top: 1rpx solid #eee;
+  margin-left: 32rpx;
+  padding: 20rpx 0rpx;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.top_three_num {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.my_ranking {
+  display: flex;
+}
+
+.head_portrait {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.top_three_name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}

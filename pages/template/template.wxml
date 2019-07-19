@@ -1,7 +1,72 @@
-
-<template name = "homeJava">
+<template name="homeJava">
   <view class='home-paper'>
     <text class='paper-title'>{{item[index].paperName}}</text>
     <text class='number' bindtap='onOpenMore'>30 道</text>
+  </view>
+</template>
+
+<template name="ranking">
+  <view class="ranking">
+    <view class="total_container">
+      <block wx:for="{{rangking}}" wx:key="index" wx:index="index">
+        <block wx:if="{{index<3}}">
+          <view class="total_container_top">
+            <view class="top_three_name">
+              <text class="total">Top{{index+1}}|</text>
+              <image class="head_portrait" src="../../images/head_portrait.png"></image>
+              <text>{{item.user.username}}</text>
+            </view>
+            <view class="top_three_num">
+              <text class="true_topic">答对题数{{item.trueNumber}}</text>
+            </view>
+          </view>
+        </block>
+      </block>
+    </view>
+  </view>
+</template>
+<template name="my_ranking">
+  <block wx:for="{{rangking}}" wx:key="index" wx:index="index">
+    <block wx:if="{{item.user.id == 1}}">
+      <view class="my_container">
+      <view class="my_container_top">
+        <text class="my_ranking">我的排名|{{index+1}}</text>
+        <text class="my_true_topic">答对题数{{item.trueNumber}}</text>
+      </view>
+    </view>
+    </block>
+  </block>
+</template>
+
+<template name="ranking_top">
+  <view class="ranking">
+    <view class="total_container">
+      <block wx:for="{{rangking}}" wx:key="index" wx:index="index">
+        <block wx:if="{{index<3}}">
+          <view class="total_container_top">
+            <view class="top_three_name">
+              <text class="total">Top{{index+1}}|</text>
+              <image class="head_portrait" src="../../images/head_portrait.png"></image>
+              <text>{{item.user.username}}</text>
+            </view>
+            <view class="top_three_num">
+              <text class="true_topic">答对题数{{item.trueNumber}}</text>
+            </view>
+          </view>
+        </block>
+        <block wx:else="{{index>3}}">
+          <view class="total_container_top">
+            <view class="top_three_name">
+              <text class="total">{{index+1}}|</text>
+              <image class="head_portrait" src="../../images/head_portrait.png"></image>
+              <text>{{item.user.username}}</text>
+            </view>
+            <view class="top_three_num">
+              <text class="true_topic">{{item.trueNumber}}</text>
+            </view>
+          </view>
+        </block>
+      </block>
+    </view>
   </view>
 </template>
