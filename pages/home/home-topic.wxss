@@ -1,0 +1,33 @@
+/* pages/home/home-topic.wxss */
+
+page {
+  background-color: #eeeeee;
+}
+
+.home-container-title {
+  margin-top: 20rpx;
+  background-color: #ffffff;
+  padding: 30rpx;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: flex-end;
+}
+
+.container-title {
+  margin-left: 20rpx;
+  font-size: 32rpx;
+  color: black;
+  font-weight: 600;
+}
+
+.home-container-title image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.number {
+  position: absolute;
+  right: 20rpx;
+  color: rgb(148, 130, 108);
+  font-size: 28rpx;
+}

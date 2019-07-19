@@ -1,0 +1,27 @@
+/* pages/home/home-java.wxss */
+
+page {
+  background-color: #eeeeee;
+}
+
+.home-container {
+  margin-top: 20rpx;
+  background-color: #ffffff;
+}
+
+.home-paper {
+  padding: 30rpx;
+  border-bottom: 1px #eeeeee solid;
+}
+
+.number {
+  position: absolute;
+  right: 30rpx;
+  color: rgb(148, 130, 108);
+  font-size: 28rpx;
+}
+
+.paper-title {
+  font-size: 30rpx;
+  font-weight: 600;
+}

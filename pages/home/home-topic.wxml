@@ -1,0 +1,12 @@
+<!--pages/home/home-topic.wxml-->
+
+<view class='home-container-title'>
+  <image src='../../images/home/java-1.png'></image>
+  <text class='container-title'>Java工程师</text>
+  <text class='number' bindtap='onOpenMore'>299道 ></text>
+</view>
+<view class='home-container-title'>
+  <image src='../../images/home/符号-测试.png'></image>
+  <text class='container-title'>测试工程师</text>
+  <text class='number' bindtap='onOpenMore'>299道 ></text>
+</view>

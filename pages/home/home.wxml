@@ -1,0 +1,30 @@
+<!--pages/home/home.wxml-->
+
+  <swiper indicator-dots='true' autoplay='true' class='home-banner'>
+    <swiper-item wx:for = "{{bannerImage}}" wx:key = "index" wx:for-item = "hanner">
+      <image src='{{hanner}}'></image>
+    </swiper-item>
+  </swiper>
+
+  <view class='home'>
+    <view class='home-lilty'>
+      <text>考试分类</text>
+    </view>
+
+    <view class='home-container-title' bindtap='onOpenTopic'>
+      <image src='../../images/home/刷题王A.png'></image>
+      <text class='container-title'>我要刷题</text>
+      <text class='number'>299道 ></text>
+    </view>
+    <view class='home-container-title' bindtap='onOpenJava' data-name='1'>
+      <image src='../../images/home/java-1.png'></image>
+      <text class='container-title'>Java工程师</text>
+      <text class='number' bindtap='onOpenMore'>299道 ></text>
+    </view>
+    <view class='home-container-title' bindtap='onOpenTest' data-name='2'>
+      <image src='../../images/home/符号-测试.png'></image>
+      <text class='container-title'>测试工程师</text>
+      <text class='number' bindtap='onOpenMore'>299道 ></text>
+    </view>
+  </view>
+
