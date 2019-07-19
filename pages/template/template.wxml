@@ -1,0 +1,7 @@
+
+<template name = "homeJava">
+  <view class='home-paper'>
+    <text class='paper-title'>{{item[index].paperName}}</text>
+    <text class='number' bindtap='onOpenMore'>30 道</text>
+  </view>
+</template>

@@ -2,21 +2,10 @@
 
 <block wx:if="{{!state}}">
   <view class='home-container'>
-    <block wx:for="{{paper}}" wx:key="index">
-      <view class='home-paper'>
-        <text class='paper-title'>{{item.lilty}}</text>
-        <text class='number' bindtap='onOpenMore'>{{item.number}}道</text>
-      </view>
-    </block>
-  </view>
-</block>
-
-<block wx:if="{{state}}">
-  <view class='home-container'>
-    <block wx:for="{{paper}}" wx:key="index">
-      <view class='home-paper'>
-        <text class='paper-title'>{{item.lilty}}测试</text>
-        <text class='number' bindtap='onOpenMore'>{{item.number}}道</text>
+    <block wx:for="{{paperList}}" wx:key="index">
+      <view class='home-paper' bindtap='onOpenAnswer' data-paperid='{{item.paperNo}}' data-papername='{{item.paperName}}'>
+        <text class='paper-title'>{{item.paperName}}</text>
+        <text class='number' bindtap='onOpenMore'>{{item.number}} 道</text>
       </view>
     </block>
   </view>

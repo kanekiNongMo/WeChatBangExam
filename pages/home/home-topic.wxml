@@ -1,12 +1,12 @@
 <!--pages/home/home-topic.wxml-->
 
-<view class='home-container-title'>
+<view class='home-container-title' bindtap='onOpenAnswer' data-random='js1'>
   <image src='../../images/home/java-1.png'></image>
   <text class='container-title'>Java工程师</text>
-  <text class='number' bindtap='onOpenMore'>299道 ></text>
+  <text class='number' bindtap='onOpenMore'>{{javaNumber}}道 ></text>
 </view>
-<view class='home-container-title'>
+<view class='home-container-title' bindtap='onOpenAnswer' data-random='js2'>
   <image src='../../images/home/符号-测试.png'></image>
   <text class='container-title'>测试工程师</text>
-  <text class='number' bindtap='onOpenMore'>299道 ></text>
+  <text class='number' bindtap='onOpenMore'>{{testNumber}}道 ></text>
 </view>

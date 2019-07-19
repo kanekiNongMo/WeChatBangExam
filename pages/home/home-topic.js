@@ -5,14 +5,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    javaNumber:0,
+    testNumber:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var javanumber = options.javanumber;
+    var testnumber = options.testnumber;
+    this.setData({
+      javaNumber: javanumber,
+      testNumber: testnumber
+    })
   },
 
   /**
@@ -62,5 +68,13 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  onOpenAnswer: function (event) {
+    var paperNo = event.currentTarget.dataset.random;
+    console.log(paperNo)
+    // wx.navigateTo({
+    //   url: ''
+    // })
   }
 })

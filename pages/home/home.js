@@ -10,14 +10,93 @@ Page({
                   "../../images/home/home-swiper3.jpeg",
                   "../../images/home/home-swiper4.jpeg",
                   "../../images/home/home-swiper5.jpeg"
-                 ]
+                 ],
+      paperNumber:222,
+      javaNumber:333,
+      testNumber:444
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.getPaperNumber();
+    this.getJavaNumber();
+    this.getTestNumber();
+  },
 
+  getPaperNumber: function () {
+    var _this = this;
+    wx.request({
+      url: "http://localhost:8888/questions/countQuestion",
+      method: "POST",
+      success: function (data) {
+        // console.log(data.data)
+        _this.setData({
+          paperNumber:data.data
+        })
+      },
+      fail: function (data) {
+        wx.showToast({
+          title: '请求失败',
+          icon: "none",
+        })
+      }
+    })
+  },
+
+  getJavaNumber: function () {
+    var _this = this;
+    wx.request({
+      url: "http://localhost:8888/questions/countQuestion",
+      method: "POST",
+      dataType: "json",
+      header:{
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      data:{
+        genre: 1
+      },
+      success: function (data) {
+        // console.log(data.data)
+        _this.setData({
+          javaNumber: data.data
+        })
+      },
+      fail: function (data) {
+        wx.showToast({
+          title: '请求失败',
+          icon: "none",
+        })
+      }
+    })
+  },
+
+  getTestNumber: function () {
+    var _this = this;
+    wx.request({
+      url: "http://localhost:8888/questions/countQuestion",
+      method: "POST",
+      dataType: "json",
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      data: {
+        genre: 2
+      },
+      success: function (data) {
+        // console.log(data.data)
+        _this.setData({
+          testNumber: data.data
+        })
+      },
+      fail: function (data) {
+        wx.showToast({
+          title: '请求失败',
+          icon: "none",
+        })
+      }
+    })
   },
 
   /**
@@ -73,22 +152,16 @@ Page({
    * 跳转我要刷题界面
    */
   onOpenTopic: function (event) {
+    var javaNumber = event.currentTarget.dataset.javanumber;
+    var testNumber = event.currentTarget.dataset.testnumber;
     wx.navigateTo({
-      url: './home-topic',
+      url: './home-topic?javanumber=' + javaNumber +'&testnumber=' + testNumber,
     })
   },
   onOpenJava: function (event) {
-    var name = event.currentTarget.dataset.name;
-    // console.log(name)
+    var papertype = event.currentTarget.dataset.papertype;
     wx.navigateTo({
-      url: './home-java?name=' + name,
-    })
-  },
-  onOpenTest: function (event) {
-    var name = event.currentTarget.dataset.name;
-    // console.log(name)
-    wx.navigateTo({
-      url: './home-java?name=' + name,
+      url: './home-java?papertype=' + papertype,
     })
   },
 })

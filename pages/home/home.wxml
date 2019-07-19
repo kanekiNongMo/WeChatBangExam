@@ -11,20 +11,20 @@
       <text>考试分类</text>
     </view>
 
-    <view class='home-container-title' bindtap='onOpenTopic'>
+    <view class='home-container-title' bindtap='onOpenTopic' data-javanumber='{{javaNumber}}' data-testnumber='{{testNumber}}'>
       <image src='../../images/home/刷题王A.png'></image>
       <text class='container-title'>我要刷题</text>
-      <text class='number'>299道 ></text>
+      <text class='number'>{{paperNumber}}道 ></text>
     </view>
-    <view class='home-container-title' bindtap='onOpenJava' data-name='1'>
+    <view class='home-container-title' bindtap='onOpenJava' data-papertype='1'>
       <image src='../../images/home/java-1.png'></image>
       <text class='container-title'>Java工程师</text>
-      <text class='number' bindtap='onOpenMore'>299道 ></text>
+      <text class='number' bindtap='onOpenMore'>{{javaNumber}}道 ></text>
     </view>
-    <view class='home-container-title' bindtap='onOpenTest' data-name='2'>
+    <view class='home-container-title' bindtap='onOpenJava' data-papertype='2'>
       <image src='../../images/home/符号-测试.png'></image>
       <text class='container-title'>测试工程师</text>
-      <text class='number' bindtap='onOpenMore'>299道 ></text>
+      <text class='number' bindtap='onOpenMore'>{{testNumber}}道 ></text>
     </view>
   </view>
 

@@ -5,12 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-      paper:[
-            {"lilty":"java1", "number":"222"},
-            { "lilty": "java2", "number": "333" },
-            { "lilty": "java3", "number": "444" },
-            { "lilty": "java4", "number": "555" }
-      ],
+      paperList:[],
       state:false
   },
 
@@ -18,50 +13,31 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var name = options.name;
-    if (name==1) {
-      this.getJavaPaper(name);
-    } else {
-      this.getTestPaper(name);
-    }
-    
+    var papertype = options.papertype;
+    this.getJavaPaper(papertype);
   },
 
-  getJavaPaper: function (name) {
-    // console.log(name)
-    // wx.request({
-    //   url: "http://t.yushu.im/v2/movie/top250",
-    //   data: {
-    //     start: start,
-    //     count: 12
-    //   },
-    //   success: function (data) {
-    //     var more = _this.data.Top250List;
-    //     for (var i = 0; i < data.data.subjects.length; i++) {
-    //       more.push(data.data.subjects[i])
-    //     }
-    //     _this.setData({
-    //       showLoading: false,
-    //       Top250List: more
-    //     })
-    //   },
-    //   fail: function (data) {
-    //     wx.showToast({
-    //       title: '请求失败',
-    //       icon: "none",
-    //     })
-    //   }
-    // })
-  },
-
-  getTestPaper: function (name) {
-    // console.log(name)
-    this.setData({
-      state: true
+  getJavaPaper: function (papertype) {
+    var _this = this;
+    wx.request({
+      url: "http://localhost:8888/paper/getPaper",
+      data: {
+        paperType: papertype
+      },
+      success: function (data) {
+        // console.log(data.data.datas)
+        _this.setData({
+          paperList: data.data.datas
+        })
+      },
+      fail: function (data) {
+        wx.showToast({
+          title: '请求失败',
+          icon: "none",
+        })
+      }
     })
-  
   },
-
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -110,5 +86,15 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  onOpenAnswer: function (event) {
+    var paperNo = event.currentTarget.dataset.paperid;
+    var paperName = event.currentTarget.dataset.papername;
+    // console.log(paperNo)
+    // console.log(paperName)
+    // wx.navigateTo({
+    //   url: ''
+    // })
   }
 })
