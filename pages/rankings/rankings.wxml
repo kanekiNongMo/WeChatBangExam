@@ -2,20 +2,20 @@
 <view class="ranking"> 
   <view class="total_ranking_title"> 
     <text class="total">总排行榜</text> 
-    <text class="all" bindtap="onOpenRankingDetail" data-ranking="{{rangking}}">全部></text> 
+    <text class="all" bindtap="onOpenRankingDetail" data-ranking="{{rangking}}">全部 ></text> 
   </view> 
 </view> 
 <template is="ranking" data="{{rangking:rangking}}"></template> 
 <template is="my_ranking" data="{{rangking:rangking}}"></template> 
 <view class="major_ranking_title"> 
   <text class="total">Java排行榜</text> 
-  <text class="all" bindtap="onOpenRankingDetail" data-ranking="{{javaRangking}}">全部></text> 
+  <text class="all" bindtap="onOpenRankingDetail" data-ranking="{{javaRangking}}">全部 ></text> 
 </view> 
 <template is="ranking" data="{{rangking:javaRangking}}"></template> 
 <template is="my_ranking" data="{{rangking:javaRangking}}"></template> 
 <view class="major_ranking_title"> 
   <text class="total">测试排行榜</text> 
-  <text class="all" bindtap="onOpenRankingDetail" data-ranking="{{testRangking}}">全部></text> 
+  <text class="all" bindtap="onOpenRankingDetail" data-ranking="{{testRangking}}">全部 ></text> 
 </view> 
 <template is="ranking"  data="{{rangking:testRangking}}"></template> 
 <template is="my_ranking" data="{{rangking:testRangking}}"></template>

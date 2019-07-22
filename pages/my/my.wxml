@@ -1,2 +1,5 @@
-<!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class="record" bindtap="onOpenRecord" data-user-id="1">
+  <image class="images" src="../../images/score.png"></image>
+  <text>成绩记录</text>
+  <image class="detail" src="../../images/details.png"></image>
+</view>

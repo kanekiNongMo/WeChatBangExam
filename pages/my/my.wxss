@@ -1,1 +1,28 @@
-/* pages/my/my.wxss */
+page {
+  background-color: #eee;
+}
+
+.record {
+  margin-top: 20rpx;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.images {
+  padding-left: 20rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.record text {
+  font-size: 34rpx;
+  padding: 20rpx;
+}
+
+.detail {
+  width: 30rpx;
+  height: 30rpx;
+  right: 20rpx;
+  position: absolute;
+}

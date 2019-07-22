@@ -7,7 +7,8 @@
     "pages/my/my",
     "pages/home/home-topic",
     "pages/home/home-java",
-    "pages/rankings/rankings-detail"
+    "pages/rankings/rankings-detail",
+    "pages/my/record"
   ],
   "window": {
     "backgroundTextStyle": "light",

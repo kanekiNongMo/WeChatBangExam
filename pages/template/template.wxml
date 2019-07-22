@@ -38,7 +38,7 @@
   </block>
 </template>
 
-<template name="ranking_top">
+<template name="ranking_detail">
   <view class="ranking">
     <view class="total_container">
       <block wx:for="{{rangking}}" wx:key="index" wx:index="index">

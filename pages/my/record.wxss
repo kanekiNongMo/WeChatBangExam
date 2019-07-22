@@ -1,0 +1,26 @@
+page {
+  background-color: #eee;
+}
+
+.record {
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.record_container {
+  width: 90%;
+  margin-left: 2.5%;
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #cdcdcd
+}
+.exam_time {
+  font-size: 28rpx;
+  color: #8a8a8a;
+}
+
+.score {
+  color: #8a8a8a;
+}

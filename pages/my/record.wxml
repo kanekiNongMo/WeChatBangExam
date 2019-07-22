@@ -1,0 +1,11 @@
+<view class="record">
+  <block wx:for="{{record}}" wx:key="index" wx:index="index">
+    <view class="record_container">
+      <view class="paper_time">
+        <text class="paper_name">{{item.examPaper.paperName}}</text>
+        <view class="exam_time">{{item.examTime}}</view>
+      </view>
+      <text class="score">{{item.score}}分</text>
+    </view>
+  </block>
+</view>
